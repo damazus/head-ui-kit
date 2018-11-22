@@ -1,0 +1,10 @@
+@import "setting/variable";
+@import "setting/mixins";
+@import "setting/reset";
+@import "setting/base";
+
+@import "component/main";
+
+// 01 head light sdfsdf
+@import "component/01_head_light/header";
+@import "component/01_head_light/hero";

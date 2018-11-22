@@ -1,0 +1,16 @@
+.main{
+  padding: 100px 0;
+  background: $color_primary;
+}
+
+.heads{
+  display: flex;
+  flex-wrap: wrap;
+  @include row;
+}
+
+.head-item{
+  width: 33.33%;
+  @include col;
+  margin-bottom: 10px;
+}

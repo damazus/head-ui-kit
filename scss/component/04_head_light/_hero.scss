@@ -1,0 +1,82 @@
+.hero{
+  display: flex;
+  flex-direction: column;
+
+  @include MQ(XL){
+    flex-direction: row;
+    min-height: 720px;
+    height: 100vh;
+  }
+}
+
+.hero-main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 32px;
+
+  @include MQ(M){
+    padding: 0 80px;
+  }
+
+  @include MQ(XL){
+    padding: 0;
+  }
+}
+
+.hero-main__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.hero-main__item--left{
+    padding: 75px 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @include MQ(M){
+    &.hero-main__item--left{
+      padding: 205px 0 55px 0;
+    }
+  }
+
+  @include MQ(L){
+    &.hero-main__item--left{
+      width: 540px;
+    }
+  }
+
+  @include MQ(XL){
+    &.hero-main__item--left{
+      padding: 82px 0 25px 0;
+    }
+  }
+}
+
+.hero__title{
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: $color_primary;
+  margin-bottom: 30px;
+
+  @include MQ(M){
+    font-size: 72px;
+  }
+
+  @include MQ(XL){
+    font-size: 90px;
+    margin-bottom: 50px;
+  }
+}
+
+.hero__description{
+  text-align: center;
+  color: $color_primary;
+
+  @include MQ(M){
+    font-size: 22px;
+    line-height: 33px;
+  }
+}

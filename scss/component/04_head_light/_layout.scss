@@ -1,0 +1,7 @@
+.main{
+  padding: 0;
+
+  @include MQ(XL){
+    width: 938px;
+  }
+}

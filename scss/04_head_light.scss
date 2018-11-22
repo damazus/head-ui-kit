@@ -1,0 +1,11 @@
+@import "setting/variable";
+@import "setting/mixins";
+@import "setting/reset";
+@import "setting/base";
+
+@import "component/main";
+
+// 04 head light
+@import "component/04_head_light/layout";
+@import "component/04_head_light/header";
+@import "component/04_head_light/hero";

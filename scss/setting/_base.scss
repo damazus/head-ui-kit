@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+
+  &.is-hidden{
+    overflow: hidden;
+  }
+}
+
+a,
+a:active,
+a:visited,
+a:hover,
+a:focus{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button{
+  cursor: pointer;
+}
