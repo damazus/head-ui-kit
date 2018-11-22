@@ -17,7 +17,7 @@
 
   @include MQ(XL){
     height: $header_height_l;
-    padding: 0;
+    padding: 0 100px;
   }
 }
 
@@ -48,7 +48,7 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  background: $color_red;
+  background: #000;
   transform: translateX(300px);
   opacity: 0;
   visibility: hidden;
@@ -90,27 +90,23 @@
   span:after{
     content: "";
     position: relative;
-    display: block;
-    width: 30px;
-    height: 3px;
-    border-radius: 1px;
-    background: #FFF;
+    display: inline-block;
+    width: $header_trigger_dot_size;
+    height: $header_trigger_dot_size;
+    border-radius: 50%;
+    background: #000;
     box-shadow: 1px 2px 2px rgba(#000, .1);
     transition: width .25s, transform .4s;
   }
 
   span:before{
     position: absolute;
-    bottom: 8px;
-    right: 0;
-    width: 22px;
+    left: -12px;
   }
 
   span:after{
     position: absolute;
-    top: 8px;
-    right: 0;
-    width: 18px;
+    right: -12px;
   }
 
   &:hover{
@@ -123,36 +119,12 @@
     }
   }
 
-  .header--mobile & {
-    span{
-      background: $color_red;
-      box-shadow: none;
-    }
-
-    span:before,
-    span:after{
-      width: 28px;
-    }
-
-    span:before{
-      bottom: 0;
-      transform: rotate(45deg);
-    }
-
-    span:after{
-      top: 0;
-      transform: rotate(-45deg);
-    }
-  }
-
   @include MQ(M){
     position: absolute;
     @include center(y);
     right: 0;
-
     opacity: 0;
     visibility: visible;
-    //transform: translateX(70px);
   }
 }
 

@@ -3,8 +3,7 @@
 @import "setting/reset";
 @import "setting/base";
 
-@import "component/main";
+@import "main";
+@import "header";
 
-// 02 head light
-@import "component/02_head_light/header";
-@import "component/02_head_light/hero";
+@import "02_head_light/hero";

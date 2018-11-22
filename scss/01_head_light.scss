@@ -3,8 +3,7 @@
 @import "setting/reset";
 @import "setting/base";
 
-@import "component/main";
+@import "main";
+@import "header";
 
-// 01 head light sdfsdf
-@import "component/01_head_light/header";
-@import "component/01_head_light/hero";
+@import "01_head_light/hero";
