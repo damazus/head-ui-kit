@@ -1,0 +1,127 @@
+.hero{
+  display: flex;
+  flex-direction: column;
+  @include hero;
+
+  @include MQ(L){
+    flex-direction: row;
+  }
+}
+
+.hero-main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include MQ(L){
+    width: 50%;
+  }
+}
+
+.hero-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 90px 30px 40px 30px;
+
+  @include MQ(M){
+    padding: 90px 80px 40px 80px;
+  }
+
+  @include MQ(L){
+    flex: 1;
+  }
+}
+
+.hero-box__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.hero__title{
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: $color_primary;
+  margin-bottom: 18px;
+
+  @include MQ(M){
+    font-size: 72px;
+  }
+
+  @include MQ(XL){
+    font-size: 90px;
+    margin-bottom: 50px;
+  }
+}
+
+.hero__description{
+  color: $color_primary;
+  text-align: center;
+
+  @include MQ(M){
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  @include MQ(L){
+    text-align: left;
+  }
+
+  @include MQ(XL){
+    max-width: 380px;
+  }
+}
+
+.hero-picture-box{
+  height: 284px;
+  padding: 0 32px;
+
+  @include MQ(M){
+    flex: 1;
+    height: 512px;
+    padding: 0 80px;
+  }
+
+  @include MQ(L){
+    width: 50%;
+    height: auto;
+    padding: 80px 80px 80px 0;
+  }
+
+  @include MQ(XL){
+    height: 100%;
+  }
+}
+
+.hero-picture-box__inner{
+  height: 100%;
+  background-image: url("../img/05_head_light.png");
+  background-size: cover;
+}
+
+.hero_squares{
+  display: none;
+
+  @include MQ(L){
+    display: block;
+  }
+
+  @include MQ(XL){
+    display: block;
+  }
+}
+
+.hero_square__item{
+  width: 60px;
+  height: 60px;
+  background: #242635;
+
+  &:first-child{
+    margin-bottom: 60px;
+  }
+}

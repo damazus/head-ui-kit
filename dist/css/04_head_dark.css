@@ -216,103 +216,105 @@ button {
 
 .hero {
   display: flex;
-  flex-direction: column;
-  min-height: 500px;
-  height: 100vh; }
-  @media only screen and (min-width: 1024px) {
+  flex-direction: column; }
+  @media only screen and (min-width: 1200px) {
     .hero {
-      flex-direction: row; } }
+      flex-direction: row;
+      min-height: 720px;
+      height: 100vh; } }
 
 .hero-main {
   display: flex;
   flex-direction: column;
   width: 100%; }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1200px) {
     .hero-main {
-      width: 50%; } }
+      width: 70%; } }
+
+.hero-media {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .hero-media {
+      flex-direction: row; } }
+  @media only screen and (min-width: 1200px) {
+    .hero-media {
+      flex-direction: column;
+      width: 30%; } }
+
+.hero-media-item {
+  height: 284px; }
+  .hero-media-item.hero-media-item--one {
+    position: relative;
+    background-image: url("../img/03_head_light_2.png");
+    background-size: cover; }
+  .hero-media-item.hero-media-item--two {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: 'Poppins';
+    color: #FFF;
+    background: #9085da; }
+  @media only screen and (min-width: 768px) {
+    .hero-media-item {
+      width: 50%;
+      height: 408px; }
+      .hero-media-item.hero-media-item--two {
+        padding: 60px; } }
+  @media only screen and (min-width: 1200px) {
+    .hero-media-item {
+      width: 100%;
+      height: 50%; } }
+
+.hero-media-item__title {
+  font-size: 18px; }
+
+.hero-media-item__content {
+  font-size: 28px; }
+  @media only screen and (min-width: 768px) {
+    .hero-media-item__content {
+      font-size: 38px; } }
+
+.hero-media-item__btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 20px;
+  padding-left: 5px;
+  color: #9085da;
+  background: rgba(255, 255, 255, 0.8); }
+  @media only screen and (min-width: 768px) {
+    .hero-media-item__btn {
+      width: 78px;
+      height: 78px; } }
 
 .hero-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  padding: 90px 30px 40px 30px; }
-  @media only screen and (min-width: 768px) {
-    .hero-box {
-      padding: 90px 80px 40px 80px; } }
-  @media only screen and (min-width: 1024px) {
-    .hero-box {
-      flex: 1; } }
+  align-items: center; }
 
-.hero-box__content {
+.hero-box-main {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  flex: 1; }
-
-.hero__title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 36px;
-  font-weight: 500;
-  color: #242635;
-  margin-bottom: 18px; }
+  width: 100%;
+  padding: 90px 32px; }
   @media only screen and (min-width: 768px) {
-    .hero__title {
-      font-size: 72px; } }
-  @media only screen and (min-width: 1200px) {
-    .hero__title {
-      font-size: 90px;
-      margin-bottom: 50px; } }
-
-.hero__description {
-  color: #242635;
-  text-align: center; }
-  @media only screen and (min-width: 768px) {
-    .hero__description {
-      font-size: 22px;
-      line-height: 33px; } }
-  @media only screen and (min-width: 1024px) {
-    .hero__description {
-      text-align: left; } }
-  @media only screen and (min-width: 1200px) {
-    .hero__description {
-      max-width: 380px; } }
-
-.hero-picture-box {
-  height: 284px;
-  padding: 0 32px; }
-  @media only screen and (min-width: 768px) {
-    .hero-picture-box {
-      flex: 1;
-      height: 512px;
-      padding: 0 80px; } }
-  @media only screen and (min-width: 1024px) {
-    .hero-picture-box {
+    .hero-box-main {
       width: 50%;
-      height: auto;
-      padding: 80px 80px 80px 0; } }
+      padding: 0 80px; } }
   @media only screen and (min-width: 1200px) {
-    .hero-picture-box {
-      height: 100%; } }
-
-.hero-picture-box__inner {
-  height: 100%;
-  background-image: url("../img/05_head_light.png");
-  background-size: cover; }
-
-.hero_squares {
-  display: none; }
-  @media only screen and (min-width: 1024px) {
-    .hero_squares {
-      display: block; } }
-  @media only screen and (min-width: 1200px) {
-    .hero_squares {
-      display: block; } }
-
-.hero_square__item {
-  width: 60px;
-  height: 60px;
-  background: #242635; }
-  .hero_square__item:first-child {
-    margin-bottom: 60px; }
+    .hero-box-main {
+      width: 60%;
+      padding: 0 0 0 140px; } }

@@ -72,7 +72,7 @@ button {
   padding: 0 20px;
   margin: 0 auto;
   width: 100%; }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1200px) {
     .container {
       width: 1024px; } }
 
@@ -89,12 +89,34 @@ button {
   width: 100%;
   height: 80px;
   background: transparent;
-  padding: 0 32px; }
+  padding: 0 30px; }
+  .header.header--dark .header__brand {
+    color: #242635; }
+  .header.header--dark span,
+  .header.header--dark span:before,
+  .header.header--dark span:after {
+    background: #242635; }
+  .header.header--dark .header-menu-link {
+    color: #242635; }
+  .header.header--dark .header-menu-link.is-active {
+    color: #0f1017; }
+  .header.header--white .header__brand {
+    color: #FFF; }
+  .header.header--white span,
+  .header.header--white span:before,
+  .header.header--white span:after {
+    background: #FFF; }
+  .header.header--white .header-menu-link {
+    color: #FFF; }
+  .header.header--white .header-menu-link.is-active {
+    color: #e6e6e6; }
+  .header.header--no-padding {
+    padding: 0; }
   @media only screen and (min-width: 768px) {
     .header {
       height: 100px;
       padding: 0 80px; } }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1200px) {
     .header {
       height: 160px;
       padding: 0 100px; } }
@@ -104,7 +126,6 @@ button {
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #242635;
   transition: transform .25s; }
   .header--mobile .header__brand {
     position: relative;
@@ -123,7 +144,6 @@ button {
   right: 0;
   bottom: 0;
   width: 100%;
-  background: #ef004a;
   transform: translateX(300px);
   opacity: 0;
   visibility: hidden;
@@ -160,10 +180,9 @@ button {
     content: "";
     position: relative;
     display: inline-block;
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    background: #000;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
     transition: width .25s, transform .4s; }
   .header__trigger span:before {
@@ -189,10 +208,7 @@ button {
 .header-menu-link {
   font-family: "Source Sans Pro";
   height: 50px;
-  color: #242635;
   padding: 0 10px; }
-  .header-menu-link.is-active {
-    color: #0f1017; }
   @media only screen and (min-width: 768px) {
     .header-menu-link {
       display: inline-block;
@@ -203,7 +219,7 @@ button {
   flex-direction: column;
   min-height: 500px;
   height: 100vh; }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1024px) {
     .hero {
       flex-direction: row; } }
 
@@ -214,7 +230,7 @@ button {
   width: 100%;
   background-image: url("../img/06_head_light.png");
   background-size: cover; }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1024px) {
     .hero-main {
       width: 68%; } }
 
@@ -228,7 +244,7 @@ button {
     .hero-box {
       padding: 0 80px;
       height: 636px; } }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1024px) {
     .hero-box {
       padding: 0 100px; } }
 
@@ -242,11 +258,12 @@ button {
   font-family: 'Poppins', sans-serif;
   font-size: 30px;
   font-weight: 500;
-  color: #242635; }
+  color: #242635;
+  margin-bottom: 30px; }
   @media only screen and (min-width: 768px) {
     .hero__title {
       font-size: 72px; } }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1200px) {
     .hero__title {
       font-size: 90px;
       margin-bottom: 50px; } }
@@ -262,15 +279,15 @@ button {
   @media only screen and (min-width: 768px) {
     .hero-media {
       padding: 45px 60px 45px; } }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1024px) {
     .hero-media {
       padding: 0 60px 45px; } }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1024px) {
     .hero-media {
       flex-direction: column;
       width: 32%; } }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   .hero-media__header {
     display: flex;
     align-items: center;
@@ -288,7 +305,7 @@ button {
     .hero-media__title {
       font-size: 18px;
       margin-bottom: 50px; } }
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1024px) {
     .hero-media__title {
       margin-bottom: 0; } }
 
@@ -310,7 +327,7 @@ button {
     display: none;
     background: #242635;
     margin-bottom: 60px; }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 1024px) {
       .hero-square-item.hero-square-item--black {
         display: block; } }
   .hero-square-item.hero-square-item--white {

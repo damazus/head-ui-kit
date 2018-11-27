@@ -72,7 +72,7 @@ button {
   padding: 0 20px;
   margin: 0 auto;
   width: 100%; }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1200px) {
     .container {
       width: 1024px; } }
 
@@ -81,28 +81,51 @@ button {
   height: auto; }
 
 .header {
+  position: relative;
+  z-index: 1001;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 80px;
   background: transparent;
-  padding: 0 32px; }
+  padding: 0 30px; }
+  .header.header--dark .header__brand {
+    color: #242635; }
+  .header.header--dark span,
+  .header.header--dark span:before,
+  .header.header--dark span:after {
+    background: #242635; }
+  .header.header--dark .header-menu-link {
+    color: #242635; }
+  .header.header--dark .header-menu-link.is-active {
+    color: #0f1017; }
+  .header.header--white .header__brand {
+    color: #FFF; }
+  .header.header--white span,
+  .header.header--white span:before,
+  .header.header--white span:after {
+    background: #FFF; }
+  .header.header--white .header-menu-link {
+    color: #FFF; }
+  .header.header--white .header-menu-link.is-active {
+    color: #e6e6e6; }
+  .header.header--no-padding {
+    padding: 0; }
   @media only screen and (min-width: 768px) {
     .header {
       height: 100px;
-      padding: 0 100px; } }
-  @media only screen and (min-width: 1440px) {
+      padding: 0 80px; } }
+  @media only screen and (min-width: 1200px) {
     .header {
       height: 160px;
-      padding: 0 140px; } }
+      padding: 0 100px; } }
 
 .header__brand {
   font-family: "Source Sans Pro";
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #242635;
   transition: transform .25s; }
   .header--mobile .header__brand {
     position: relative;
@@ -121,7 +144,6 @@ button {
   right: 0;
   bottom: 0;
   width: 100%;
-  background: #ef004a;
   transform: translateX(300px);
   opacity: 0;
   visibility: hidden;
@@ -157,39 +179,22 @@ button {
   .header__trigger span:after {
     content: "";
     position: relative;
-    display: block;
-    width: 30px;
-    height: 3px;
-    border-radius: 1px;
-    background: #FFF;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
     transition: width .25s, transform .4s; }
   .header__trigger span:before {
     position: absolute;
-    bottom: 8px;
-    right: 0;
-    width: 22px; }
+    left: -12px; }
   .header__trigger span:after {
     position: absolute;
-    top: 8px;
-    right: 0;
-    width: 18px; }
+    right: -12px; }
   .header__trigger:hover span:before {
     width: 18px; }
   .header__trigger:hover span:after {
     width: 22px; }
-  .header--mobile .header__trigger span {
-    background: #ef004a;
-    box-shadow: none; }
-  .header--mobile .header__trigger span:before,
-  .header--mobile .header__trigger span:after {
-    width: 28px; }
-  .header--mobile .header__trigger span:before {
-    bottom: 0;
-    transform: rotate(45deg); }
-  .header--mobile .header__trigger span:after {
-    top: 0;
-    transform: rotate(-45deg); }
   @media only screen and (min-width: 768px) {
     .header__trigger {
       position: absolute;
@@ -203,10 +208,7 @@ button {
 .header-menu-link {
   font-family: "Source Sans Pro";
   height: 50px;
-  color: #242635;
   padding: 0 10px; }
-  .header-menu-link.is-active {
-    color: #0f1017; }
   @media only screen and (min-width: 768px) {
     .header-menu-link {
       display: inline-block;
@@ -214,17 +216,21 @@ button {
 
 .hero {
   display: flex;
-  flex-direction: column; }
-  @media only screen and (min-width: 1440px) {
+  flex-direction: column;
+  min-height: 500px;
+  height: 100vh; }
+  @media only screen and (min-width: 1024px) {
     .hero {
-      min-height: 720px;
+      height: auto; } }
+  @media only screen and (min-width: 1200px) {
+    .hero {
       height: 100vh; } }
 
 .hero-items {
   display: flex;
   flex-direction: column;
   flex: 1; }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1200px) {
     .hero-items {
       flex-direction: row; } }
 
@@ -232,7 +238,8 @@ button {
   width: 100%; }
   .hero-item.hero-item--left {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    flex: 1; }
   .hero-item.hero-item--right {
     height: 284px;
     background-image: url("../img/02_head_light.png");
@@ -241,7 +248,7 @@ button {
   @media only screen and (min-width: 768px) {
     .hero-item.hero-item--right {
       height: 512px; } }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1200px) {
     .hero-item {
       width: 50%; }
       .hero-item.hero-item--right {
@@ -250,40 +257,47 @@ button {
 .hero__box {
   display: flex;
   align-items: flex-end;
-  padding-bottom: 50px; }
+  padding: 50px 30px 0; }
   @media only screen and (min-width: 768px) {
     .hero__box {
-      padding-bottom: 100px; } }
-  @media only screen and (min-width: 1440px) {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 80px; } }
+  @media only screen and (min-width: 1024px) {
+    .hero__box {
+      padding: 100px 80px; } }
+  @media only screen and (min-width: 1200px) {
     .hero__box {
       flex: 1;
       flex-direction: column;
       align-items: flex-start;
-      padding-bottom: 0; } }
+      padding: 0; } }
 
 .hero__content {
-  padding: 50px 32px 0; }
-  @media only screen and (min-width: 768px) {
+  padding-right: 10px; }
+  @media only screen and (min-width: 1200px) {
     .hero__content {
-      padding: 100px 100px 0; } }
-  @media only screen and (min-width: 1440px) {
-    .hero__content {
-      flex: 1;
-      padding: 50px 140px 0; } }
+      padding: 0 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1; } }
 
 .hero__title {
   font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 500;
   color: #242635;
-  margin-bottom: 40px; }
+  margin-bottom: 30px; }
   @media only screen and (min-width: 768px) {
     .hero__title {
-      font-size: 72px;
-      margin-bottom: 60px; } }
-  @media only screen and (min-width: 1440px) {
+      font-size: 72px; } }
+  @media only screen and (min-width: 1200px) {
     .hero__title {
-      font-size: 90px; } }
+      font-size: 90px;
+      margin-bottom: 60px; } }
 
 .hero__description {
   font-family: "Source Sans Pro";
@@ -300,13 +314,12 @@ button {
   justify-content: center;
   width: 32px;
   height: 55px;
-  background: #ffab9d;
-  margin: 0 32px 0 0; }
+  background: #ffab9d; }
   @media only screen and (min-width: 768px) {
     .hero-action-box {
       width: 78px;
       height: 102px; } }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1200px) {
     .hero-action-box {
       display: flex;
       flex-direction: row;
@@ -323,7 +336,7 @@ button {
   background: none;
   font-family: "Poppins";
   color: #FFF; }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1200px) {
     .hero-action__btn {
       display: block;
       font-size: 18px; } }
@@ -338,7 +351,7 @@ button {
       width: 62px;
       height: 62px;
       margin: 0 8px; } }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1200px) {
     .hero-square {
       width: 60px;
       height: 60px; } }

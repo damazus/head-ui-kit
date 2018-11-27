@@ -218,101 +218,84 @@ button {
   display: flex;
   flex-direction: column;
   min-height: 500px;
-  height: 100vh; }
-  @media only screen and (min-width: 1024px) {
-    .hero {
-      flex-direction: row; } }
-
-.hero-main {
-  display: flex;
-  flex-direction: column;
-  width: 100%; }
-  @media only screen and (min-width: 1024px) {
-    .hero-main {
-      width: 50%; } }
-
-.hero-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  padding: 90px 30px 40px 30px; }
+  height: 100vh;
+  padding: 0 30px;
+  background-image: url("../img/01_head_dark.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-color: #000; }
   @media only screen and (min-width: 768px) {
-    .hero-box {
-      padding: 90px 80px 40px 80px; } }
-  @media only screen and (min-width: 1024px) {
-    .hero-box {
-      flex: 1; } }
+    .hero {
+      padding: 0 80px; } }
+  @media only screen and (min-width: 1200px) {
+    .hero {
+      background-size: contain;
+      min-height: 720px;
+      padding: 0; } }
 
-.hero-box__content {
+.hero-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex: 1;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0; }
+  @media only screen and (min-width: 1200px) {
+    .hero-container {
+      width: 1024px; } }
+
+.hero__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 1; }
+
+.hero__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .hero__title {
   font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 500;
-  color: #242635;
-  margin-bottom: 18px; }
+  color: #FFF;
+  margin-bottom: 30px; }
   @media only screen and (min-width: 768px) {
     .hero__title {
       font-size: 72px; } }
   @media only screen and (min-width: 1200px) {
     .hero__title {
-      font-size: 90px;
-      margin-bottom: 50px; } }
+      margin-bottom: 50px;
+      font-size: 90px; } }
 
 .hero__description {
-  color: #242635;
-  text-align: center; }
+  font-family: "Source Sans Pro";
+  color: #FFF;
+  line-height: 18px;
+  max-width: 410px; }
   @media only screen and (min-width: 768px) {
     .hero__description {
       font-size: 22px;
       line-height: 33px; } }
+
+.hero-square__item {
+  width: 34px;
+  height: 40px;
+  background: #ff6382; }
+  .hero-square__item.hero-square__item--white {
+    width: 40px;
+    height: 40px;
+    background: #FFF;
+    transform: translateX(-3px); }
   @media only screen and (min-width: 1024px) {
-    .hero__description {
-      text-align: left; } }
-  @media only screen and (min-width: 1200px) {
-    .hero__description {
-      max-width: 380px; } }
-
-.hero-picture-box {
-  height: 284px;
-  padding: 0 32px; }
-  @media only screen and (min-width: 768px) {
-    .hero-picture-box {
-      flex: 1;
-      height: 512px;
-      padding: 0 80px; } }
-  @media only screen and (min-width: 1024px) {
-    .hero-picture-box {
-      width: 50%;
-      height: auto;
-      padding: 80px 80px 80px 0; } }
-  @media only screen and (min-width: 1200px) {
-    .hero-picture-box {
-      height: 100%; } }
-
-.hero-picture-box__inner {
-  height: 100%;
-  background-image: url("../img/05_head_light.png");
-  background-size: cover; }
-
-.hero_squares {
-  display: none; }
-  @media only screen and (min-width: 1024px) {
-    .hero_squares {
-      display: block; } }
-  @media only screen and (min-width: 1200px) {
-    .hero_squares {
-      display: block; } }
-
-.hero_square__item {
-  width: 60px;
-  height: 60px;
-  background: #242635; }
-  .hero_square__item:first-child {
-    margin-bottom: 60px; }
+    .hero-square__item {
+      width: 44px;
+      height: 50px; }
+      .hero-square__item.hero-square__item--white {
+        width: 50px;
+        height: 50px;
+        background: #FFF; } }

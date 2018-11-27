@@ -8,51 +8,7 @@
   width: 100%;
   height: $header_height;
   background: transparent;
-  padding: 0 30px;
-
-  &.header--dark{
-    .header__brand{
-      color: $color_primary;
-    }
-
-    span,
-    span:before,
-    span:after{
-      background: $color_primary;
-    }
-
-    .header-menu-link{
-      color: $color_primary;
-    }
-
-    .header-menu-link.is-active{
-      color: darken($color_primary, 10%);
-    }
-  }
-
-  &.header--white{
-    .header__brand{
-      color: $color_white;
-    }
-
-    span,
-    span:before,
-    span:after{
-      background: $color_white;
-    }
-
-    .header-menu-link{
-      color: $color_white;
-    }
-
-    .header-menu-link.is-active{
-      color: darken($color_white, 10%);
-    }
-  }
-
-  &.header--no-padding{
-    padding: 0;
-  }
+  padding: 0 32px;
 
   @include MQ(M){
     height: $header_height_m;
@@ -70,6 +26,7 @@
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 1px;
+  color: $color_primary;
   transition: transform .25s;
 
   .header--mobile & {
@@ -91,11 +48,11 @@
   right: 0;
   bottom: 0;
   width: 100%;
+  background: #000;
   transform: translateX(300px);
   opacity: 0;
   visibility: hidden;
   transition: transform .3s, opacity .25s, visibility .25s;
-
 
   @include MQ(M){
     flex-direction: row;
@@ -130,13 +87,14 @@
 
   span,
   span:before,
-  span:after {
+  span:after{
     content: "";
     position: relative;
     display: inline-block;
     width: $header_trigger_dot_size;
     height: $header_trigger_dot_size;
     border-radius: 50%;
+    background: #000;
     box-shadow: 1px 2px 2px rgba(#000, .1);
     transition: width .25s, transform .4s;
   }
@@ -173,7 +131,12 @@
 .header-menu-link{
   font-family: "Source Sans Pro";
   height: 50px;
+  color: $color_primary;
   padding: 0 10px;
+
+  &.is-active{
+    color: darken($color_primary, 10%);
+  }
 
   @include MQ(M){
     display: inline-block;

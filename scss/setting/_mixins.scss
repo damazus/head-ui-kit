@@ -1,8 +1,9 @@
 // breakpoints
 $S:     576px;
 $M:     768px;
-$L:     1200px;
-$XL:    1440px;
+$L:     1024px;
+$XL:    1200px;
+$XXL:    1440px;
 
 // media queries
 @mixin MQ($canvas) {
@@ -17,6 +18,9 @@ $XL:    1440px;
   }
   @else if $canvas == XL {
     @media only screen and (min-width: $XL) { @content; }
+  }
+  @else if $canvas == XXL {
+    @media only screen and (min-width: $XXL) { @content; }
   }
   @else {
     @media only screen and (min-width: $canvas) { @content; }
@@ -88,4 +92,14 @@ $XL:    1440px;
 @mixin col($gutter: 10px){
   padding-left: $gutter;
   padding-right: $gutter;
+}
+
+@mixin hero{
+  min-height: $hero_min_height;
+  height: 100vh;
+}
+
+@mixin img-fluid{
+  max-width: 100%;
+  height: auto;
 }
