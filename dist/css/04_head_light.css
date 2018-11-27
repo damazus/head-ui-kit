@@ -226,7 +226,8 @@ button {
   @media only screen and (min-width: 1200px) {
     .hero {
       background-size: contain;
-      padding: 0; } }
+      padding: 0;
+      height: auto; } }
 
 .hero-container {
   display: flex;
@@ -284,3 +285,6 @@ button {
   @media only screen and (min-width: 1024px) {
     .hero__description {
       width: 540px; } }
+  @media only screen and (min-width: 1200px) {
+    .hero__description {
+      margin-bottom: 28px; } }

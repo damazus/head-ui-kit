@@ -243,6 +243,9 @@ button {
   @media only screen and (min-width: 1024px) {
     .hero-box {
       flex: 1; } }
+  @media only screen and (min-width: 1200px) {
+    .hero-box {
+      padding: 0 100px; } }
 
 .hero-box__content {
   display: flex;
@@ -250,6 +253,9 @@ button {
   align-items: center;
   justify-content: center;
   flex: 1; }
+  @media only screen and (min-width: 1024px) {
+    .hero-box__content {
+      align-items: flex-start; } }
 
 .hero__title {
   font-family: 'Poppins', sans-serif;
@@ -263,7 +269,7 @@ button {
   @media only screen and (min-width: 1200px) {
     .hero__title {
       font-size: 90px;
-      margin-bottom: 50px; } }
+      margin-bottom: 30px; } }
 
 .hero__description {
   color: #242635;

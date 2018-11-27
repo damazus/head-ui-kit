@@ -85,8 +85,8 @@ $XXL:    1440px;
 }
 
 @mixin row($gutter: 10px){
-  margin-left: $gutter;
-  margin-right: $gutter;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
 }
 
 @mixin col($gutter: 10px){

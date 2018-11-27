@@ -9,8 +9,7 @@
 .hero{
   display: flex;
   flex-direction: column;
-  min-height: $hero_min_height;
-  height: 100vh;
+  @include hero;
 
   @include MQ(L){
     flex-direction: row;

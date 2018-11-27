@@ -215,42 +215,144 @@ button {
       height: auto; } }
 
 .hero {
-  padding-top: 40px;
-  min-height: 720px;
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
   height: 100vh;
-  background-image: url("../img/01_head_light.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: 100%; }
+  background: #000; }
+  @media only screen and (min-width: 1024px) {
+    .hero {
+      height: auto; } }
+  @media only screen and (min-width: 1200px) {
+    .hero {
+      height: 100vh; } }
+
+.hero-items {
+  display: flex;
+  flex-direction: column;
+  flex: 1; }
+  @media only screen and (min-width: 1200px) {
+    .hero-items {
+      flex-direction: row; } }
+
+.hero-item {
+  width: 100%; }
+  .hero-item.hero-item--left {
+    display: flex;
+    flex-direction: column;
+    flex: 1; }
+  .hero-item.hero-item--right {
+    height: 284px;
+    background-image: url("../img/02_head_dark.png");
+    background-repeat: no-repeat;
+    background-size: cover; }
+  @media only screen and (min-width: 768px) {
+    .hero-item.hero-item--right {
+      height: 512px; } }
+  @media only screen and (min-width: 1200px) {
+    .hero-item {
+      width: 50%; }
+      .hero-item.hero-item--right {
+        height: auto; } }
 
 .hero__box {
-  max-width: 410px; }
+  display: flex;
+  align-items: flex-end;
+  padding: 50px 30px 0; }
+  @media only screen and (min-width: 768px) {
+    .hero__box {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 80px; } }
+  @media only screen and (min-width: 1024px) {
+    .hero__box {
+      padding: 100px 80px; } }
+  @media only screen and (min-width: 1200px) {
+    .hero__box {
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0; } }
+
+.hero__content {
+  padding-right: 10px; }
+  @media only screen and (min-width: 1200px) {
+    .hero__content {
+      padding: 0 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1; } }
 
 .hero__title {
   font-family: 'Poppins', sans-serif;
-  font-size: 90px;
+  font-size: 36px;
   font-weight: 500;
-  color: #242635;
-  margin-bottom: 50px; }
+  color: #FFF;
+  margin-bottom: 30px; }
+  @media only screen and (min-width: 768px) {
+    .hero__title {
+      font-size: 72px; } }
+  @media only screen and (min-width: 1200px) {
+    .hero__title {
+      font-size: 90px;
+      margin-bottom: 50px; } }
 
 .hero__description {
   font-family: "Source Sans Pro";
-  font-size: 22px;
-  color: #242635;
-  line-height: 33px; }
+  color: #FFF; }
+  @media only screen and (min-width: 768px) {
+    .hero__description {
+      font-size: 22px;
+      line-height: 33px; } }
 
-.hero_squares {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1024px;
-  margin: 0 auto; }
+.hero-action-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 55px;
+  background: #8f84da; }
+  @media only screen and (min-width: 768px) {
+    .hero-action-box {
+      width: 78px;
+      height: 102px; } }
+  @media only screen and (min-width: 1200px) {
+    .hero-action-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 160px;
+      padding: 0 100px; } }
 
-.hero_square__item {
-  width: 44px;
-  height: 50px;
-  background: #ff6382; }
-  .hero_square__item:first-child {
-    margin-bottom: 60px; }
+.hero-action__btn {
+  display: none;
+  box-shadow: none;
+  border: none;
+  background: none;
+  font-family: "Poppins";
+  color: #FFF; }
+  @media only screen and (min-width: 1200px) {
+    .hero-action__btn {
+      display: block;
+      font-size: 18px; } }
+
+.hero-square {
+  width: 26px;
+  height: 26px;
+  background: #FFF;
+  margin: 0 4px; }
+  @media only screen and (min-width: 768px) {
+    .hero-square {
+      width: 62px;
+      height: 62px;
+      margin: 0 8px; } }
+  @media only screen and (min-width: 1200px) {
+    .hero-square {
+      width: 60px;
+      height: 60px; } }

@@ -40,6 +40,10 @@
   @include MQ(L){
     flex: 1;
   }
+
+  @include MQ(XL){
+    padding: 0 100px;
+  }
 }
 
 .hero-box__content{
@@ -48,6 +52,10 @@
   align-items: center;
   justify-content: center;
   flex: 1;
+
+  @include MQ(L){
+    align-items: flex-start;
+  }
 }
 
 .hero__title{
@@ -63,7 +71,7 @@
 
   @include MQ(XL){
     font-size: 90px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 }
 

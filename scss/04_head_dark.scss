@@ -5,3 +5,88 @@
 
 @import "main";
 @import "header";
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  @include hero;
+  padding: 0 30px;
+  background: $color_dark;
+
+  @include MQ(M){
+    padding: 0 80px;
+  }
+
+  @include MQ(XL){
+    background-size: contain;
+    padding: 0;
+    height: auto;
+  }
+}
+
+.hero-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  @include container;
+  padding: 0
+}
+
+.hero-main{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.hero-main__item{
+  flex: 1;
+
+  &.hero-main__item--left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.hero-main__picture{
+  display: block;
+  @include img-fluid;
+  margin: 0 auto;
+}
+
+.hero__title{
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: $color_white;
+  margin-bottom: 30px;
+
+  @include MQ(M){
+    font-size: 72px;
+  }
+
+  @include MQ(XL){
+    font-size: 90px;
+    margin-bottom: 50px;
+  }
+}
+
+.hero__description{
+  text-align: center;
+  color: $color_white;
+
+  @include MQ(M){
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  @include MQ(L){
+    width: 540px;
+  }
+
+  @include MQ(XL){
+    margin-bottom: 28px;
+  }
+}

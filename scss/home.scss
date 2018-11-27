@@ -1,0 +1,40 @@
+@import "setting/variable";
+@import "setting/mixins";
+@import "setting/reset";
+@import "setting/base";
+
+@import "main";
+
+.main{
+  padding: 50px 0;
+  background: $color_primary;
+}
+
+.main__title{
+  font-size: 55px;
+  color: #FFF;
+  margin-bottom: 41px;
+
+  span{
+    display: block;
+  }
+}
+
+.heads{
+  display: flex;
+  flex-wrap: wrap;
+  @include row;
+}
+
+.head-item{
+  @include col;
+  margin-bottom: 15px;
+
+  @include MQ(M){
+    width: 50%;
+  }
+
+  @include MQ(L){
+    width: 33.33%;
+  }
+}

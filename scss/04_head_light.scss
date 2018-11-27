@@ -19,6 +19,7 @@
   @include MQ(XL){
     background-size: contain;
     padding: 0;
+    height: auto;
   }
 }
 
@@ -82,5 +83,9 @@
 
   @include MQ(L){
     width: 540px;
+  }
+
+  @include MQ(XL){
+    margin-bottom: 28px;
   }
 }
