@@ -315,7 +315,7 @@ button {
       padding: 0 80px; } }
   @media only screen and (min-width: 1200px) {
     .hero-box-main {
-      width: 60%;
+      width: 57%;
       padding: 0 0 0 100px; } }
 
 .hero-box-picturebox {
@@ -335,7 +335,7 @@ button {
     .hero-box-picturebox {
       position: relative;
       z-index: 1;
-      width: 40%;
+      width: 43%;
       height: 100%; } }
 
 .hero-title-wrapper {

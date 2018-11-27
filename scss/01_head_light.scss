@@ -6,4 +6,93 @@
 @import "main";
 @import "header";
 
-@import "01_head_light/hero";
+.hero{
+  display: flex;
+  flex-direction: column;
+  @include hero;
+  padding: 0 30px;
+  background-image: url("../img/01_head_light.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+
+  @include MQ(M){
+    padding: 0 80px;
+  }
+
+  @include MQ(XL){
+    background-size: contain;
+    min-height: 720px;
+    padding: 0;
+  }
+}
+
+.hero-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  @include container;
+  padding: 0
+}
+
+.hero__box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.hero__content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__title{
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: $color_primary;
+  margin-bottom: 30px;
+
+  @include MQ(M){
+    font-size: 72px;
+  }
+
+  @include MQ(XL){
+    font-size: 90px;
+    margin-bottom: 50px;
+  }
+}
+
+.hero__description{
+  font-family: "Source Sans Pro";
+  color: $color_primary;
+  line-height: 18px;
+  max-width: 410px;
+
+  @include MQ(M){
+    font-size: 22px;
+    line-height: 33px;
+  }
+}
+
+.hero-square__item{
+  width: 34px;
+  height: 40px;
+  background: $color_hero_square_bg;
+
+  &:first-child{
+    margin-bottom: 30px;
+  }
+
+  @include MQ(L){
+    width: 44px;
+    height: 50px;
+
+    &:first-child{
+      margin-bottom: 60px;
+    }
+  }
+}

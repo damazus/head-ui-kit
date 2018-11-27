@@ -6,4 +6,51 @@
 @import "main";
 @import "header";
 
-@import "02_head_dark/hero";
+.hero{
+  padding-top: 40px;
+  min-height: 720px;
+  height: 100vh;
+  background-image: url("../img/01_head_light.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+}
+
+.hero__box{
+  max-width: 410px;
+}
+
+.hero__title{
+  font-family: 'Poppins', sans-serif;
+  font-size: 90px;
+  font-weight: 500;
+  color: $color_primary;
+  margin-bottom: 50px;
+}
+
+.hero__description{
+  font-family: "Source Sans Pro";
+  font-size: 22px;
+  color: $color_primary;
+  line-height: 33px;
+}
+
+.hero_squares{
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.hero_square__item{
+  width: 44px;
+  height: 50px;
+  background: $color_hero_square_bg;
+
+  &:first-child{
+    margin-bottom: 60px;
+  }
+}
