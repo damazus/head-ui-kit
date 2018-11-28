@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 ```
-$ git clone git@github.com:damazus/ui-visual-rocks.git
+$ git clone git@github.com:damazus/head-ui-kit.git
 ```
 
 ```
@@ -28,7 +28,7 @@ $ gulp
 ```
 
 ### Crédit
-thank to the author of the design [https://stefanopeschiera.com/head-ui-kit](https://stefanopeschiera.com/head-ui-kit)
+thank to the author of the design [https://stefanopeschiera.com/head-ui-kit](https://www.stefanopeschiera.com/head-ui-kit)
 
 ### Built With
 * HTML5
