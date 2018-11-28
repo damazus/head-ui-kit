@@ -32,11 +32,11 @@
 
 .hero-item{
   width: 100%;
+  flex: 1;
 
   &.hero-item--left{
     display: flex;
     flex-direction: column;
-    flex: 1;
   }
 
   &.hero-item--right{

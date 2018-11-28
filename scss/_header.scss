@@ -10,44 +10,11 @@
   background: transparent;
   padding: 0 30px;
 
-  &.header--dark{
-    .header__brand{
-      color: $color_primary;
-    }
 
-    span,
-    span:before,
-    span:after{
-      background: $color_primary;
-    }
-
-    .header-menu-link{
-      color: $color_primary;
-    }
-
-    .header-menu-link.is-active{
-      color: darken($color_primary, 10%);
-    }
-  }
-
-  &.header--white{
-    .header__brand{
-      color: $color_white;
-    }
-
-    span,
-    span:before,
-    span:after{
-      background: $color_white;
-    }
-
-    .header-menu-link{
-      color: $color_white;
-    }
-
-    .header-menu-link.is-active{
-      color: darken($color_white, 10%);
-    }
+  &.header--mobile .header-menu{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   &.header--no-padding{
@@ -65,19 +32,133 @@
   }
 }
 
+.header.header--dark{
+  .header__trigger{
+    span,
+    span:before,
+    span:after{
+      background: $color_primary;
+    }
+
+    &:hover{
+      span,
+      span:before,
+      span:after {
+        background: lighten($color_primary, 15%);
+      }
+    }
+  }
+
+  .header__brand,
+  .header-menu-link{
+    color: $color_primary;
+  }
+
+  .header-menu-link.is-active{
+    color: darken($color_primary, 10%);
+  }
+
+  .header-menu{
+    background: $color_primary;
+
+    @include MQ(M){
+      background: none;
+    }
+  }
+}
+
+.header.header--dark.header--mobile{
+  .header__trigger{
+    span,
+    span:before,
+    span:after{
+      background: $color_white;
+    }
+
+    span:before,
+    span:after{
+      width: 28px;
+    }
+
+    span:before{
+      bottom: 0;
+      transform: rotate(45deg);
+    }
+
+    span:after{
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .header__brand,
+  .header-menu-link{
+    color: $color_white;
+  }
+}
+
+.header.header--white{
+  span,
+  span:before,
+  span:after{
+    background: $color_white;
+  }
+
+  .header__brand,
+  .header-menu-link{
+    color: $color_white;
+  }
+
+  .header-menu-link.is-active{
+    color: darken($color_white, 10%);
+  }
+
+  .header-menu{
+    background: $color_white;
+
+    @include MQ(M){
+      background: none;
+    }
+  }
+}
+
+.header.header--white.header--mobile{
+  .header__trigger{
+    span,
+    span:before,
+    span:after{
+      background: $color_dark;
+    }
+
+    span:before,
+    span:after{
+      width: 28px;
+    }
+
+    span:before{
+      bottom: 0;
+      transform: rotate(45deg);
+    }
+
+    span:after{
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &.header--mobile .header__brand,
+  &.header--mobile .header-menu-link{
+    color: $color_dark;
+  }
+}
+
 .header__brand{
+  z-index: 1003;
   font-family: "Source Sans Pro";
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 1px;
   transition: transform .25s;
-
-  .header--mobile & {
-    position: relative;
-    z-index: 1003;
-    color: #FFF;
-    transform: scale(1.2) translateX(15px);
-  }
 }
 
 .header-menu{
@@ -91,10 +172,10 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  transform: translateX(300px);
+  transform: translateX(100%);
   opacity: 0;
   visibility: hidden;
-  transition: transform .3s, opacity .25s, visibility .25s;
+  transition: transform .25s, opacity .25s, visibility .25s;
 
 
   @include MQ(M){
@@ -104,14 +185,6 @@
     background: none;
     transform: translateX(0);
     transition: tranform .0s;
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.header.header--mobile{
-  .header-menu{
-    transform: translateX(0);
     opacity: 1;
     visibility: visible;
   }
@@ -151,16 +224,6 @@
     right: -12px;
   }
 
-  &:hover{
-    span:before{
-      width: 18px;
-    }
-
-    span:after{
-      width: 22px;
-    }
-  }
-
   @include MQ(M){
     position: absolute;
     @include center(y);
@@ -171,12 +234,16 @@
 }
 
 .header-menu-link{
+  display: flex;
+  align-items: center;
   font-family: "Source Sans Pro";
+  font-size: 28px;
   height: 50px;
   padding: 0 10px;
 
   @include MQ(M){
     display: inline-block;
     height: auto;
+    font-size: 16px;
   }
 }
