@@ -118,6 +118,7 @@
 .hero__description{
   font-family: "Source Sans Pro";
   color: $color_primary;
+  max-width: 360px;
 
   @include MQ(M){
     font-size: 22px;

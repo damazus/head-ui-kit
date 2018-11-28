@@ -255,7 +255,7 @@ button {
       top: 50%;
       bottom: auto;
       transform: translateY(-50%);
-      right: 0;
+      display: none;
       opacity: 0;
       visibility: visible; } }
 
@@ -359,7 +359,8 @@ button {
 
 .hero__description {
   font-family: "Source Sans Pro";
-  color: #242635; }
+  color: #242635;
+  max-width: 360px; }
   @media only screen and (min-width: 768px) {
     .hero__description {
       font-size: 22px;

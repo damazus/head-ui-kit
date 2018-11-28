@@ -33,11 +33,11 @@
 
 .hero-item{
   width: 100%;
+  flex: 1;
 
   &.hero-item--left{
     display: flex;
     flex-direction: column;
-    flex: 1;
   }
 
   &.hero-item--right{
@@ -119,6 +119,7 @@
 .hero__description{
   font-family: "Source Sans Pro";
   color: $color_white;
+  max-width: 360px;
 
   @include MQ(M){
     font-size: 22px;

@@ -227,7 +227,7 @@
   @include MQ(M){
     position: absolute;
     @include center(y);
-    right: 0;
+    display: none;
     opacity: 0;
     visibility: visible;
   }
