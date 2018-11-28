@@ -7,7 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
  for development and testing purposes.
 
 ### Live Demo
-:wave: [Live preview](https://damazus.github.io/head-ui-kit.git)
+:wave: [Live preview](https://damazus.github.io/head-ui-kit)
 
 ### Installing
 ```
