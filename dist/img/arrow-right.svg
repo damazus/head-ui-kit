@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="24px" viewBox="0 0 48 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Navigation/Long Right</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="36 4 34.59 5.41 40.17 11 4 11 4 13 40.17 13 34.59 18.59 36 20 44 12"></polygon>
+    </defs>
+    <g id="Icons/Navigation/Long-Right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Shape" fill="#1C1C1C" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <g id="Color/Primary/Primary-2" mask="url(#mask-2)" fill="#242635">
+            <g transform="translate(-6.000000, -18.000000)" id="Color">
+                <rect x="0" y="0" width="60" height="60"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
