@@ -89,3 +89,22 @@
     margin-bottom: 28px;
   }
 }
+
+
+.hero.hero--light{
+  background-color: $color_white;
+
+  .hero__title,
+  .hero__description{
+    color: $color_primary;
+  }
+}
+
+.hero.hero--dark{
+  background-color: $color_dark;
+
+  .hero__title,
+  .hero__description{
+    color: $color_white;
+  }
+}

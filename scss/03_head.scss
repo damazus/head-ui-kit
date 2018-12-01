@@ -47,18 +47,20 @@
 
   &.hero-media-item--one{
     position: relative;
-    background-image: url("../img/03_head_light_2.png");
     background-size: cover;
   }
 
   &.hero-media-item--two{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    font-family: 'Poppins';
-    color: #FFF;
-    background: #9085da;
+    display: none;
+
+    @include MQ(M){
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      font-family: 'Poppins';
+      color: #FFF;
+    }
   }
 
   @include MQ(M){
@@ -94,17 +96,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 70px;
+  width: $hero_media_item_btn;
+  height: $hero_media_item_btn;
   border-radius: 50%;
   font-size: 20px;
   padding-left: 5px;
-  color: #9085da;
-  background: rgba(#FFF, .8);
+  background: rgba(#FFF, .9);
 
-  @include MQ(M){
-    width: 78px;
-    height: 78px;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    @include center;
+    width: $hero_media_item_btn_after;
+    height: $hero_media_item_btn_after;
+    border-radius: 50%;
+    background: rgba(#FFF, .2);
   }
 }
 
@@ -134,7 +141,6 @@
 .hero-box-picturebox{
   display: none;
   width: 100%;
-  background-image: url("../img/03_head_light_1.png");
   background-size: cover;
 
   @include MQ(M){
@@ -179,20 +185,43 @@
   }
 }
 
-.hero_squares{
+.hero-btn{
   display: none;
 
   @include MQ(XL){
-    display: block;
+    @include resetBtn;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 60px;
   }
 }
 
-.hero_square__item{
-  width: 60px;
-  height: 60px;
-  background: #242635;
+.hero.hero--light{
+  background-color: $color_white;
 
-  &:first-child{
-    margin-bottom: 60px;
+  .hero__title,
+  .hero__description{
+    color: $color_primary;
+  }
+
+  .hero-media-item.hero-media-item--two{
+    background: #9085da;
+  }
+}
+
+.hero.hero--dark{
+  background-color: $color_dark;
+
+  .hero__title,
+  .hero__description{
+    color: $color_white;
+  }
+
+  .hero-media-item.hero-media-item--two{
+    background: #ffab9d;
   }
 }

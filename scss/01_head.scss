@@ -11,7 +11,6 @@
   flex-direction: column;
   @include hero;
   padding: 0 30px;
-  background-image: url("../img/01_head_light.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 100%;
@@ -53,7 +52,6 @@
   font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 500;
-  color: $color_primary;
   margin-bottom: 30px;
 
   @include MQ(M){
@@ -62,13 +60,11 @@
 
   @include MQ(XL){
     font-size: 90px;
-    margin-bottom: 50px;
   }
 }
 
 .hero__description{
   font-family: "Source Sans Pro";
-  color: $color_primary;
   line-height: 18px;
   max-width: 410px;
 
@@ -78,21 +74,35 @@
   }
 }
 
-.hero-square__item{
-  width: 34px;
-  height: 40px;
+.hero-btn{
+  @include resetBtn;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23px;
+  height: 81px;
   background: $color_hero_square_bg;
 
-  &:first-child{
-    margin-bottom: 30px;
+  @include MQ(M){
+    width: 45px;
+    height: 162px;
   }
+}
 
-  @include MQ(L){
-    width: 44px;
-    height: 50px;
+.hero.hero--light{
+  background-color: $color_white;
 
-    &:first-child{
-      margin-bottom: 60px;
-    }
+  .hero__title,
+  .hero__description{
+    color: $color_primary;
+  }
+}
+
+.hero.hero--dark{
+  background-color: $color_dark;
+
+  .hero__title,
+  .hero__description{
+    color: $color_white;
   }
 }

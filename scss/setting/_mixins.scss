@@ -103,3 +103,10 @@ $XXL:    1440px;
   max-width: 100%;
   height: auto;
 }
+
+@mixin resetBtn{
+  box-shadow: none;
+  border: none;
+  background: none;
+  padding: 0;
+}

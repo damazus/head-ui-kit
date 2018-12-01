@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>01 head dark</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500|Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/01_head_dark.css">
+    <link rel="stylesheet" href="dist/css/01_head.css">
 </head>
 <body>
-<div class="hero">
+<div class="hero hero--dark" style="background-image: url(dist/img/01_head_dark.png)">
     <div class="hero-container">
         <header class="header header--white header--no-padding" id="header">
             <a href="#" class="header__brand" id="header__brand">Head</a>
@@ -30,11 +30,30 @@
                 <div class="hero__title">Technology</div>
                 <p class="hero__description">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcor.</p>
             </div>
-            <div class="hero-squares">
-                <div class="hero-square__item"></div>
-                <div class="hero-square__item hero-square__item--white"></div>
-                <div class="hero-square__item"></div>
-            </div>
+            <button class="hero-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="40"
+                     viewBox="0 0 16 40">
+                    <defs>
+                        <path id="s17aa" d="M323 721l-1.41 1.41 5.58 5.59H291v2h36.17l-5.58 5.59L323 737l8-8z"/>
+                        <path id="s17ac" d="M281 759v-60h60v60z"/>
+                        <clipPath id="s17ab">
+                            <use xlink:href="#s17aa"/>
+                        </clipPath>
+                    </defs>
+                    <g>
+                        <g transform="rotate(90 514 223)">
+                            <g>
+                                <use fill="#1c1c1c" xlink:href="#s17aa"/>
+                            </g>
+                            <g clip-path="url(#s17ab)">
+                                <g>
+                                    <use fill="#fff" xlink:href="#s17ac"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </button>
         </div>
     </div>
 </div>

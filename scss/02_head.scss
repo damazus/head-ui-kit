@@ -10,14 +10,13 @@
   display: flex;
   flex-direction: column;
   @include hero;
-  background: $color_dark;
 
   @include MQ(L){
     height: auto;
   }
 
   @include MQ(XL){
-    height: 100vh;
+    @include hero;
   }
 }
 
@@ -41,10 +40,8 @@
   }
 
   &.hero-item--right{
-    height: 284px;
-    background-image: url("../img/02_head_dark.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
   }
 
   @include MQ(M){
@@ -62,16 +59,61 @@
   }
 }
 
+.hero-item-right__top{
+  flex: 1;
+  height: 284px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-item-right__bottom{
+  display: none;
+
+  @include MQ(XL){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+  }
+}
+
+.hero-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-nav__number{
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.hero-nav-progress{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(80px * 4);
+  height: 2px;
+}
+
+.hero-nav-progress__state{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 80px;
+  height: 2px;
+}
+
 .hero__box{
   display: flex;
-  align-items: flex-end;
-  padding: 50px 30px 0;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 50px 30px 30px;
 
   @include MQ(M){
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 0 80px;
   }
 
@@ -80,10 +122,22 @@
   }
 
   @include MQ(XL){
-    flex: 1;
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
+  }
+}
+
+.hero__box-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+
+  @include MQ(XL){
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -103,7 +157,6 @@
   font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 500;
-  color: $color_white;
   margin-bottom: 30px;
 
   @include MQ(M){
@@ -112,13 +165,11 @@
 
   @include MQ(XL){
     font-size: 90px;
-    margin-bottom: 50px;
   }
 }
 
 .hero__description{
   font-family: "Source Sans Pro";
-  color: $color_white;
   max-width: 360px;
 
   @include MQ(M){
@@ -134,7 +185,6 @@
   justify-content: center;
   width: 32px;
   height: 55px;
-  background: $color_purple;
 
   @include MQ(M){
     width: 78px;
@@ -152,11 +202,8 @@
   }
 }
 
-.hero-action__btn{
+.hero-action-box__text{
   display: none;
-  box-shadow: none;
-  border: none;
-  background: none;
   font-family: "Poppins";
   color: #FFF;
 
@@ -166,20 +213,71 @@
   }
 }
 
-.hero-square{
-  width: 26px;
-  height: 26px;
-  background: #FFF;
-  margin: 0 4px;
+.hero-action-box__btn{
+  @include resetBtn;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 57px;
 
   @include MQ(M){
-    width: 62px;
-    height: 62px;
-    margin: 0 8px;
+    width: 78px;
+    height: 103px;
   }
 
   @include MQ(XL){
     width: 60px;
     height: 60px;
+  }
+}
+
+.hero.hero--light{
+  background-color: $color_white;
+
+  .hero__title,
+  .hero__description{
+    color: $color_primary;
+  }
+
+  .hero-action-box{
+    background: #ffab9d;
+  }
+
+  .hero-nav__number{
+    color: $color_primary;
+  }
+
+  .hero-nav-progress{
+    background: #dddee0;
+  }
+
+  .hero-nav-progress__state{
+    background: $color_primary;
+  }
+}
+
+.hero.hero--dark{
+  background-color: $color_dark;
+
+  .hero__title,
+  .hero__description{
+    color: $color_white;
+  }
+
+  .hero-action-box{
+    background: $color_purple;
+  }
+
+  .hero-nav__number{
+    color: $color_white;
+  }
+
+  .hero-nav-progress{
+    background: #fcffff;
+  }
+
+  .hero-nav-progress__state{
+    background: #6f7fbd;
   }
 }

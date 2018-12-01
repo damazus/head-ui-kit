@@ -7,45 +7,72 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>03 head dark</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500|Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/03_head_dark.css">
+    <link rel="stylesheet" href="dist/css/02_head.css">
 </head>
 <body>
-<div class="hero">
-    <div class="hero-main">
-        <header class="header header--white" id="header">
-            <a href="#" class="header__brand" id="header__brand">Head</a>
-            <nav class="header-nav">
-                <ul class="header-menu" id="header-menu">
-                    <li class="header-menu-item"><a href="#0" class="header-menu-link">Works</a></li>
-                    <li class="header-menu-item"><a href="#0" class="header-menu-link">Services</a></li>
-                    <li class="header-menu-item"><a href="#0" class="header-menu-link">Contacts</a></li>
-                </ul>
-                <a href="#0" class="header__trigger" id="header__trigger">
-                    <span></span>
-                </a>
-            </nav>
-        </header>
-        <div class="hero-box">
-            <div class="hero-box-main">
-                <div class="hero-title-wrapper">
-                    <div class="hero__title">Iceland</div>
-                </div>
-                <div class="hero_squares">
-                    <div class="hero_square__item"></div>
+<div class="hero hero--dark">
+    <div class="hero-items">
+        <div class="hero-item hero-item--left">
+            <header class="header header--white" id="header">
+                <a href="#0" class="header__brand" id="header__brand">Head</a>
+                <nav class="header-nav">
+                    <ul class="header-menu" id="header-menu">
+                        <li class="header-menu-item"><a href="#0" class="header-menu-link">Works</a></li>
+                        <li class="header-menu-item"><a href="#0" class="header-menu-link">Services</a></li>
+                        <li class="header-menu-item"><a href="#0" class="header-menu-link">Contacts</a></li>
+                    </ul>
+                    <a href="#0" class="header__trigger" id="header__trigger">
+                        <span></span>
+                    </a>
+                </nav>
+            </header>
+            <div class="hero__box">
+                <div class="hero__box-inner">
+                    <div class="hero__content">
+                        <div class="hero__title">Food</div>
+                        <p class="hero__description">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcor.</p>
+                    </div>
+                    <div class="hero-action-box">
+                        <div class="hero-action-box__text">Call to action</div>
+                        <button class="hero-action-box__btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="24"
+                                 viewBox="0 0 48 24">
+                                <defs>
+                                    <path id="yo7ka" d="M567 721l-1.41 1.41 5.58 5.59H535v2h36.17l-5.58 5.59L567 737l8-8z"/>
+                                    <path id="yo7kc" d="M525 759v-60h60v60z"/>
+                                    <clipPath id="yo7kb">
+                                        <use xlink:href="#yo7ka"/>
+                                    </clipPath>
+                                </defs>
+                                <g>
+                                    <g transform="translate(-531 -717)">
+                                        <g>
+                                            <use fill="#1c1c1c" xlink:href="#yo7ka"/>
+                                        </g>
+                                        <g clip-path="url(#yo7kb)">
+                                            <g>
+                                                <use fill="#fff" xlink:href="#yo7kc"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="hero-box-picturebox"></div>
         </div>
-    </div>
-    <div class="hero-media">
-        <div class="hero-media-item hero-media-item--one">
-            <a href="#0" class="hero-media-item__btn">
-                <i class="ion ion-play"></i>
-            </a>
-        </div>
-        <div class="hero-media-item hero-media-item--two">
-            <h3 class="hero-media-item__title">Label</h3>
-            <p class="hero-media-item__content">Your content title here.</p>
+        <div class="hero-item hero-item--right">
+            <div class="hero-item-right__top" style="background-image: url(dist/img/02_head_dark.png)"></div>
+            <div class="hero-item-right__bottom">
+                <div class="hero-nav">
+                    <div class="hero-nav__number">01</div>
+                    <div class="hero-nav-progress">
+                        <span class="hero-nav-progress__state"></span>
+                    </div>
+                    <div class="hero-nav__number">04</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   @include hero;
-  background: $color_dark;
 
   @include MQ(L){
     flex-direction: row;
@@ -22,7 +21,6 @@
   flex-direction: column;
   flex: 1;
   width: 100%;
-  background-image: url("../img/06_head_dark.png");
   background-size: cover;
 
   @include MQ(L){
@@ -58,7 +56,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 30px;
   font-weight: 500;
-  color: $color_white;
+  color: $color_primary;
   margin-bottom: 30px;
 
   @include MQ(M){
@@ -78,7 +76,6 @@
   width: 100%;
   color: #FFF;
   padding: 24px 32px 34px;
-  background: #5c7cfa;
 
   @include MQ(M){
     padding: 45px 60px 45px;
@@ -126,36 +123,54 @@
   font-family: "Poppins";
   font-size: 20px;
   font-weight: 500;
-  padding-bottom: 4px;
   width: calc(100% - 100px);
 
   @include MQ(M){
     font-size: 38px;
-    padding-bottom: 10px;
   }
 }
 
+.hero-btn{
+  display: none;
 
-.hero-square-item{
-  width: 34px;
-  height: 34px;
-
-  &.hero-square-item--white.hero-square-item--left{
-    display: none;
-    background: #fefefe;
-    margin-bottom: 60px;
-
-    @include MQ(L){
-      display: block;
-    }
+  &.hero-btn--dark{
+    margin-bottom: 45px;
   }
 
-  &.hero-square-item--white{
-    background: #fefefe;
+  @include MQ(XL){
+    @include resetBtn;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transform: translateX(-30%);
+  }
+}
+
+.hero.hero--light{
+  background-color: $color_white;
+
+  .hero__title,
+  .hero__description{
+    color: $color_primary;
   }
 
-  @include MQ(M){
-    width: 60px;
-    height: 60px;
+  .hero-media{
+    background: $color_dark;
+  }
+}
+
+.hero.hero--dark{
+  background-color: $color_dark;
+
+  .hero__title,
+  .hero__description{
+    color: $color_white;
+  }
+
+  .hero-media{
+    background: #5c7cfa;
   }
 }

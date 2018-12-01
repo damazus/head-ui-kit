@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>05 head dark</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500|Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/05_head_dark.css">
+    <link rel="stylesheet" href="dist/css/03_head.css">
 </head>
 <body>
-<div class="hero">
+<div class="hero hero--dark">
     <div class="hero-main">
         <header class="header header--white" id="header">
             <a href="#" class="header__brand" id="header__brand">Head</a>
@@ -26,17 +26,48 @@
             </nav>
         </header>
         <div class="hero-box">
-            <div class="hero-box__content">
-                <div class="hero__title">Musician</div>
-                <p class="hero__description">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcor.</p>
+            <div class="hero-box-main">
+                <div class="hero-title-wrapper">
+                    <div class="hero__title">Iceland</div>
+                </div>
+                <button class="hero-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="40"
+                         viewBox="0 0 16 40">
+                        <defs>
+                            <path id="s17aa" d="M323 721l-1.41 1.41 5.58 5.59H291v2h36.17l-5.58 5.59L323 737l8-8z"/>
+                            <path id="s17ac" d="M281 759v-60h60v60z"/>
+                            <clipPath id="s17ab">
+                                <use xlink:href="#s17aa"/>
+                            </clipPath>
+                        </defs>
+                        <g>
+                            <g transform="rotate(90 514 223)">
+                                <g>
+                                    <use fill="#1c1c1c" xlink:href="#s17aa"/>
+                                </g>
+                                <g clip-path="url(#s17ab)">
+                                    <g>
+                                        <use fill="#fff" xlink:href="#s17ac"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
             </div>
-            <div class="hero_squares">
-                <div class="hero_square__item"></div>
-            </div>
+            <div class="hero-box-picturebox" style="background-image: url(dist/img/03_head_dark_1.png);"></div>
         </div>
     </div>
-    <div class="hero-picture-box">
-        <div class="hero-picture-box__inner"></div>
+    <div class="hero-media">
+        <div class="hero-media-item hero-media-item--one" style="background-image: url(dist/img/03_head_dark_2.png)">
+            <a href="#0" class="hero-media-item__btn">
+                <img src="dist/img/play-orange.png" alt="play"/>
+            </a>
+        </div>
+        <div class="hero-media-item hero-media-item--two">
+            <h3 class="hero-media-item__title">Label</h3>
+            <p class="hero-media-item__content">Your content title here.</p>
+        </div>
     </div>
 </div>
 <script src="dist/js/app.js"></script>
