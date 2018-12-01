@@ -349,6 +349,7 @@ button {
 
 .hero-media__title {
   font-family: "Poppins";
+  font-weight: 500;
   margin-bottom: 20px; }
   @media only screen and (min-width: 768px) {
     .hero-media__title {

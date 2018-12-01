@@ -269,85 +269,122 @@ button {
   display: flex;
   flex-direction: column;
   min-height: 500px;
-  height: 100vh;
-  padding: 0 30px; }
-  @media only screen and (min-width: 768px) {
+  height: 100vh; }
+  @media only screen and (min-width: 1024px) {
     .hero {
-      padding: 0 80px; } }
-  @media only screen and (min-width: 1200px) {
-    .hero {
-      background-size: contain;
-      padding: 0;
-      height: auto; } }
-
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 0 20px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 0; }
-  @media only screen and (min-width: 1200px) {
-    .hero-container {
-      width: 1024px; } }
+      flex-direction: row; } }
 
 .hero-main {
   display: flex;
   flex-direction: column;
-  flex: 1;
   width: 100%; }
+  @media only screen and (min-width: 1024px) {
+    .hero-main {
+      width: 50%; } }
 
-.hero-main__item {
+.hero-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 90px 30px 40px 30px; }
+  @media only screen and (min-width: 768px) {
+    .hero-box {
+      padding: 90px 80px 40px 80px; } }
+  @media only screen and (min-width: 1024px) {
+    .hero-box {
+      flex: 1; } }
+  @media only screen and (min-width: 1200px) {
+    .hero-box {
+      padding: 0 100px; } }
+
+.hero-box__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex: 1; }
-  .hero-main__item.hero-main__item--left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-
-.hero-main__picture {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto; }
+  @media only screen and (min-width: 1024px) {
+    .hero-box__content {
+      align-items: flex-start; } }
 
 .hero__title {
   font-family: 'Poppins', sans-serif;
   font-size: 36px;
   font-weight: 500;
-  color: #242635;
-  margin-bottom: 30px; }
+  margin-bottom: 18px; }
   @media only screen and (min-width: 768px) {
     .hero__title {
       font-size: 72px; } }
   @media only screen and (min-width: 1200px) {
     .hero__title {
       font-size: 90px;
-      margin-bottom: 50px; } }
+      margin-bottom: 30px; } }
 
 .hero__description {
-  text-align: center;
-  color: #242635; }
+  text-align: center; }
   @media only screen and (min-width: 768px) {
     .hero__description {
       font-size: 22px;
       line-height: 33px; } }
   @media only screen and (min-width: 1024px) {
     .hero__description {
-      width: 540px; } }
+      text-align: left; } }
   @media only screen and (min-width: 1200px) {
     .hero__description {
-      margin-bottom: 28px; } }
+      max-width: 380px; } }
+
+.hero-picture-box {
+  height: 284px;
+  padding: 0 32px; }
+  @media only screen and (min-width: 768px) {
+    .hero-picture-box {
+      flex: 1;
+      height: 512px;
+      padding: 0 80px; } }
+  @media only screen and (min-width: 1024px) {
+    .hero-picture-box {
+      width: 50%;
+      height: auto;
+      padding: 80px 80px 80px 0; } }
+  @media only screen and (min-width: 1200px) {
+    .hero-picture-box {
+      height: 100%; } }
+
+.hero-picture-box__inner {
+  height: 100%; }
+
+.hero-btn {
+  display: none; }
+  @media only screen and (min-width: 1200px) {
+    .hero-btn {
+      box-shadow: none;
+      border: none;
+      background: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 50px;
+      transform: translateX(-30%); } }
 
 .hero.hero--light {
   background-color: #FFF; }
   .hero.hero--light .hero__title,
   .hero.hero--light .hero__description {
     color: #242635; }
+  .hero.hero--light .hero-picture-box__inner {
+    background-size: cover; }
 
 .hero.hero--dark {
   background-color: #000; }
   .hero.hero--dark .hero__title,
   .hero.hero--dark .hero__description {
     color: #FFF; }
+  .hero.hero--dark .hero-picture-box__inner {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; }
